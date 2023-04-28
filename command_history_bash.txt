@@ -1,0 +1,212 @@
+leo_amv@leo:~$ cat > pets.txt
+dogs
+cats
+hamsters
+leo_amv@leo:~$ cat pets.txt
+dogs
+cats
+hamsters
+leo_amv@leo:~$ cat > pack_animals.txt
+horse
+camel
+donkey
+leo_amv@leo:~$ cat pack_animals.txt
+horse
+camel
+donkey
+leo_amv@leo:~$ cat pets.txt pack_animals.txt > mans_friends.txt
+leo_amv@leo:~$ cat mans_friends.txt
+dogs
+cats
+hamsters
+horse
+camel
+donkey
+leo_amv@leo:~$ mkdir animals/
+leo_amv@leo:~$ mv mans_friends.txt animals/
+leo_amv@leo:~$ cd animals/
+leo_amv@leo:~/animals$ ll
+итого 12
+drwxrwxr-x  2 leo_amv leo_amv 4096 апр 14 18:01 ./
+drwxr-x--- 27 leo_amv leo_amv 4096 апр 14 18:01 ../
+-rw-rw-r--  1 leo_amv leo_amv   38 апр 14 17:58 mans_friends.txt
+leo_amv@leo:~/animals$ cat mans_friends.txt
+dogs
+cats
+hamsters
+horse
+camel
+donkey
+leo_amv@leo:~/animals$ cd ..
+leo_amv@leo:~$ cat > mysql_pubkey.asc
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: SKS 1.1.6
+Comment: Hostname: pgp.mit.edu
+
+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
+sTSKHe+QnnnoFmu4gnmDU31i
+=Xqbo
+-----END PGP PUBLIC KEY BLOCK-----
+leo_amv@leo:~$ sudo apt-key add /home/leo_amv/mysql_pubkey.asc
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+OK
+leo_amv@leo:~$ cd /etc/apt/sources.list.d/
+leo_amv@leo:/etc/apt/sources.list.d$ sudo su
+root@leo:/etc/apt/sources.list.d# cat > mysql.list
+deb http://repo.mysql.com/apt/ubuntu/ jammy mysql-8.0
+root@leo:/etc/apt/sources.list.d# exit
+exit
+leo_amv@leo:/etc/apt/sources.list.d$ cd /home/leo_amv/
+leo_amv@leo:~$ sudo apt-get update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Пол:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Сущ:5 https://download.docker.com/linux/ubuntu jammy InRelease
+Сущ:6 https://dl.google.com/linux/chrome/deb stable InRelease
+Пол:7 http://repo.mysql.com/apt/ubuntu jammy InRelease [15,2 kB]
+Пол:8 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 Packages [8 555 B]
+Получено 361 kB за 2с (238 kB/s)
+Чтение списков пакетов… Готово
+W: http://repo.mysql.com/apt/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+leo_amv@leo:~$ sudo apt-get install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl
+  libhtml-template-perl libprotobuf-lite23
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  mysql-client mysql-common mysql-community-client mysql-community-client-core mysql-community-client-plugins
+  mysql-community-server mysql-community-server-core
+Следующие пакеты будут УДАЛЕНЫ:
+  mysql-client-8.0 mysql-client-core-8.0 mysql-server-8.0 mysql-server-core-8.0
+Следующие НОВЫЕ пакеты будут установлены:
+  mysql-client mysql-community-client mysql-community-client-core mysql-community-client-plugins
+  mysql-community-server mysql-community-server-core mysql-server
+Следующие пакеты будут обновлены:
+  mysql-common
+Обновлено 1 пакетов, установлено 7 новых пакетов, для удаления отмечено 4 пакетов, и 4 пакетов не обновлено.
+Необходимо скачать 31,3 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 33,3 MB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-common amd64 8.0.32-1ubuntu22.04 [68,6 kB]
+Пол:2 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client-plugins amd64 8.0.32-1ubuntu22.04 [1 437 kB]
+Пол:3 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client-core amd64 8.0.32-1ubuntu22.04 [2 184 kB]
+Пол:4 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client amd64 8.0.32-1ubuntu22.04 [2 458 kB]Пол:5 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-client amd64 8.0.32-1ubuntu22.04 [67,3 kB]
+Пол:6 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-server-core amd64 8.0.32-1ubuntu22.04 [25,0 MB]
+Пол:7 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-server amd64 8.0.32-1ubuntu22.04 [79,1 kB]
+Пол:8 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-server amd64 8.0.32-1ubuntu22.04 [67,3 kB]
+Получено 31,3 MB за 9с (3 501 kB/s)
+Предварительная настройка пакетов …
+(Чтение базы данных … на данный момент установлено 217355 файлов и каталогов.)
+Удаляется mysql-server-8.0 (8.0.32-0ubuntu0.22.04.2) …
+update-alternatives: используется /etc/mysql/my.cnf.fallback для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Удаляется mysql-client-8.0 (8.0.32-0ubuntu0.22.04.2) …
+Удаляется mysql-client-core-8.0 (8.0.32-0ubuntu0.22.04.2) …
+Удаляется mysql-server-core-8.0 (8.0.32-0ubuntu0.22.04.2) …
+(Чтение базы данных … на данный момент установлено 217152 файла и каталога.)
+Подготовка к распаковке …/0-mysql-common_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-common (8.0.32-1ubuntu22.04) на замену (5.8+1.0.8) …
+Выбор ранее не выбранного пакета mysql-community-client-plugins.
+Подготовка к распаковке …/1-mysql-community-client-plugins_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client-plugins (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-client-core.
+Подготовка к распаковке …/2-mysql-community-client-core_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client-core (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-client.
+Подготовка к распаковке …/3-mysql-community-client_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-client.
+Подготовка к распаковке …/4-mysql-client_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-client (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-server-core.
+Подготовка к распаковке …/5-mysql-community-server-core_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-server-core (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-server.
+Подготовка к распаковке …/6-mysql-community-server_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-server (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-server.
+Подготовка к распаковке …/7-mysql-server_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-server (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-common (8.0.32-1ubuntu22.04) …
+Устанавливается новая версия файла настройки /etc/mysql/conf.d/mysql.cnf …
+Устанавливается новая версия файла настройки /etc/mysql/my.cnf.fallback …
+Настраивается пакет mysql-community-server-core (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-community-client-plugins (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-community-client-core (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-community-client (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-client (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-community-server (8.0.32-1ubuntu22.04) …
+Устанавливается новая версия файла настройки /etc/apparmor.d/usr.sbin.mysqld …
+Устанавливается новая версия файла настройки /etc/mysql/mysql.cnf …
+Устанавливается новая версия файла настройки /etc/mysql/mysql.conf.d/mysqld.cnf …
+update-alternatives: используется /etc/mysql/mysql.cnf для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Настраивается пакет mysql-server (8.0.32-1ubuntu22.04) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для libc-bin (2.35-0ubuntu3.1) …
+leo_amv@leo:~$ sudo apt download cheese
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 cheese amd64 41.1-1build1 [149 kB]
+Получено 149 kB за 0с (314 kB/s)
+W: Загрузка выполняется от лица суперпользователя без ограничений песочницы, так как файл «/home/leo_amv/cheese_41.1-1build1_amd64.deb» недоступен для пользователя «_apt». - pkgAcquire::Run (13: Отказано в доступе)
+leo_amv@leo:~$ sudo dpkg -i cheese_41.1-1build1_amd64.deb
+(Чтение базы данных … на данный момент установлен 217381 файл и каталог.)
+Подготовка к распаковке cheese_41.1-1build1_amd64.deb …
+Распаковывается cheese (41.1-1build1) на замену (41.1-1build1) …
+Настраивается пакет cheese (41.1-1build1) …
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1ubuntu3) …
+Обрабатываются триггеры для desktop-file-utils (0.26-1ubuntu3) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+leo_amv@leo:~$ rm cheese_41.1-1build1_amd64.deb
+rm: удалить защищённый от записи обычный файл 'cheese_41.1-1build1_amd64.deb'? y
+leo_amv@leo:~$ sudo dpkg -P cheese
+(Чтение базы данных … на данный момент установлен 217381 файл и каталог.)
+Удаляется cheese (41.1-1build1) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1ubuntu3) …
+Обрабатываются триггеры для desktop-file-utils (0.26-1ubuntu3) …
+leo_amv@leo:~$

@@ -1,0 +1,268 @@
+root@leo:/home/leo_amv# mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 13
+Server version: 8.0.32 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0,04 sec)
+
+mysql> create database mans_friends;
+Query OK, 1 row affected (0,48 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mans_friends       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0,01 sec)
+
+mysql> use mans_friends;
+mysql> create table dog (name VARCHAR(40) NOT NULL, command VARCHAR(30) NOT NULL, birthdate DATE NOT NULL);
+Query OK, 0 rows affected (0,72 sec)(40) NOT NULL, co
+
+mysql> create table cat (name VARCHAR(40) NOT NULL, command VARCHAR(30) NOT NULL, birthdate DATE NOT NULL);
+Query OK, 0 rows affected (0,65 sec)
+
+mysql> create table hamster (name VARCHAR(40) NOT NULL, command VARCHAR(30) NOT NULL, birthdate DATE NOT NULL);
+Query OK, 0 rows affected (1,38 sec)
+
+mysql> create table horse (name VARCHAR(40) NOT NULL, command VARCHAR(30) NOT NULL, birthdate DATE NOT NULL);
+Query OK, 0 rows affected (0,85 sec)
+
+mysql> create table camel (name VARCHAR(40) NOT NULL, command VARCHAR(30) NOT NULL, birthdate DATE NOT NULL);
+Query OK, 0 rows affected (1,26 sec)
+
+mysql> create table donkey (name VARCHAR(40) NOT NULL, command VARCHAR(30) NOT NULL, birthdate DATE NOT NULL);
+Query OK, 0 rows affected (1,14 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_mans_friends |
++------------------------+
+| camel                  |
+| cat                    |
+| dog                    |
+| donkey                 |
+| hamster                |
+| horse                  |
++------------------------+
+6 rows in set (0,00 sec)
+
+mysql> insert into dog(name,command,birthdate)values ("dog1", "sit", "2021-03-05"), ("dog2", "bark", "2019-06-28");
+Query OK, 2 rows affected (1,87 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> insert into cat(name,command,birthdate)values ("cat1", "eat", "2020-10-15"), ("cat2", "purr", "2015-04-18");
+Query OK, 2 rows affected (0,15 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> insert into hamster(name,command,birthdate)values ("hamster1", "drink", "2018-09-21"), ("hamster2", "run", "2021-07-13");
+Query OK, 2 rows affected (0,15 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> insert into horse(name,command,birthdate)values ("horse1", "gallop", "2013-08-22"), ("horse2", "walk", "2010-02-28");
+Query OK, 2 rows affected (0,38 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> insert into camel(name,command,birthdate)values ("camel1", "rest", "2008-10-13"), ("camel2", "walk", "2009-04-15");
+Query OK, 2 rows affected (0,15 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> insert into donkey(name,command,birthdate)values ("donkey1", "stay", "2011-11-11"), ("donkey2", "carry", "2007-09-19");
+Query OK, 2 rows affected (0,44 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from dog;
++------+---------+------------+
+| name | command | birthdate  |
++------+---------+------------+
+| dog1 | sit     | 2021-03-05 |
+| dog2 | bark    | 2019-06-28 |
++------+---------+------------+
+2 rows in set (0,00 sec)
+
+mysql> select * from cat;
++------+---------+------------+
+| name | command | birthdate  |
++------+---------+------------+
+| cat1 | eat     | 2020-10-15 |
+| cat2 | purr    | 2015-04-18 |
++------+---------+------------+
+2 rows in set (0,00 sec)
+
+mysql> select * from hamster;
++----------+---------+------------+
+| name     | command | birthdate  |
++----------+---------+------------+
+| hamster1 | drink   | 2018-09-21 |
+| hamster2 | run     | 2021-07-13 |
++----------+---------+------------+
+2 rows in set (0,00 sec)
+
+mysql> select * from horse;
++--------+---------+------------+
+| name   | command | birthdate  |
++--------+---------+------------+
+| horse1 | gallop  | 2013-08-22 |
+| horse2 | walk    | 2010-02-28 |
++--------+---------+------------+
+2 rows in set (0,00 sec)
+
+mysql> select * from camel;
++--------+---------+------------+
+| name   | command | birthdate  |
++--------+---------+------------+
+| camel1 | rest    | 2008-10-13 |
+| camel2 | walk    | 2009-04-15 |
++--------+---------+------------+
+2 rows in set (0,00 sec)
+
+mysql> select * from donkey;
++---------+---------+------------+
+| name    | command | birthdate  |
++---------+---------+------------+
+| donkey1 | stay    | 2011-11-11 |
+| donkey2 | carry   | 2007-09-19 |
++---------+---------+------------+
+2 rows in set (0,01 sec)
+
+mysql> drop table camel;
+Query OK, 0 rows affected (0,39 sec)
+
+mysql> show tables;
++------------------------+
+| Tables_in_mans_friends |
++------------------------+
+| cat                    |
+| dog                    |
+| donkey                 |
+| hamster                |
+| horse                  |
++------------------------+
+5 rows in set (0,00 sec)
+
+mysql> CREATE TABLE pack_animals (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT) SELECT name, command, birthdate, 'horse' as animal_type FROM horse;
+Query OK, 2 rows affected (0,92 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from pack_animals;
++----+--------+---------+------------+-------------+
+| id | name   | command | birthdate  | animal_type |
++----+--------+---------+------------+-------------+
+|  1 | horse1 | gallop  | 2013-08-22 | horse       |
+|  2 | horse2 | walk    | 2010-02-28 | horse       |
++----+--------+---------+------------+-------------+
+2 rows in set (0,00 sec)
+
+mysql> INSERT INTO pack_animals (name, command, birthdate, animal_type) SELECT name, command, birthdate, 'donke' as animal_type FROM donkey;
+Query OK, 2 rows affected (0,11 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from pack_animals;
++----+---------+---------+------------+-------------+
+| id | name    | command | birthdate  | animal_type |
++----+---------+---------+------------+-------------+
+|  1 | horse1  | gallop  | 2013-08-22 | horse       |
+|  2 | horse2  | walk    | 2010-02-28 | horse       |
+|  4 | donkey1 | stay    | 2011-11-11 | donke       |
+|  5 | donkey2 | carry   | 2007-09-19 | donke       |
++----+---------+---------+------------+-------------+
+4 rows in set (0,00 sec)
+
+mysql> CREATE TABLE pet (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT) SELECT name, command, birthdate, animal_type FROM pack_animals;
+Query OK, 4 rows affected (1,25 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO pet (name, command, birthdate, animal_type) SELECT name, command, birthdate, 'dog' as animal_type FROM dog;
+Query OK, 2 rows affected (0,12 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO pet (name, command, birthdate, animal_type) SELECT name, command, birthdate, 'cat' as animal_type FROM cat;
+Query OK, 2 rows affected (0,10 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO pet (name, command, birthdate, animal_type) SELECT name, command, birthdate, 'hamst' as animal_type FROM hamster;
+Query OK, 2 rows affected (0,09 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from pet;
++----+----------+---------+------------+-------------+
+| id | name     | command | birthdate  | animal_type |
++----+----------+---------+------------+-------------+
+|  1 | horse1   | gallop  | 2013-08-22 | horse       |
+|  2 | horse2   | walk    | 2010-02-28 | horse       |
+|  3 | donkey1  | stay    | 2011-11-11 | donke       |
+|  4 | donkey2  | carry   | 2007-09-19 | donke       |
+|  8 | dog1     | sit     | 2021-03-05 | dog         |
+|  9 | dog2     | bark    | 2019-06-28 | dog         |
+| 11 | cat1     | eat     | 2020-10-15 | cat         |
+| 12 | cat2     | purr    | 2015-04-18 | cat         |
+| 14 | hamster1 | drink   | 2018-09-21 | hamst       |
+| 15 | hamster2 | run     | 2021-07-13 | hamst       |
++----+----------+---------+------------+-------------+
+10 rows in set (0,00 sec)
+
+mysql> CREATE TABLE young_animals (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT) SELECT name, command, birthdate, animal_type, (TIMESTAMPDIFF(MONTH, birthdate, CURDATE())) as age_months FROM (SELECT * FROM pack_animals UNION SELECT * FROM pet) s WHERE birthdate BETWEEN CURDATE() - INTERVAL 3 YEAR AND CURDATE(
+) - INTERVAL 1 YEAR;
+Query OK, 3 rows affected (0,70 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * drom young_animals;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'drom young_animals' at line 1
+mysql> select * from young_animals;
++----+----------+---------+------------+-------------+------------+
+| id | name     | command | birthdate  | animal_type | age_months |
++----+----------+---------+------------+-------------+------------+
+|  1 | dog1     | sit     | 2021-03-05 | dog         |         25 |
+|  2 | cat1     | eat     | 2020-10-15 | cat         |         30 |
+|  3 | hamster2 | run     | 2021-07-13 | hamst       |         21 |
++----+----------+---------+------------+-------------+------------+
+3 rows in set (0,00 sec)
+
+mysql> CREATE TABLE animals (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT) SELECT name, command, birthdate, animal_type FROM (SELECT * FROM pack_animals UNI
+ON SELECT * FROM pet) s;
+Query OK, 12 rows affected (0,70 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+mysql> select * from animals;
++----+----------+---------+------------+-------------+
+| id | name     | command | birthdate  | animal_type |
++----+----------+---------+------------+-------------+
+|  1 | horse1   | gallop  | 2013-08-22 | horse       |
+|  2 | horse2   | walk    | 2010-02-28 | horse       |
+|  3 | donkey1  | stay    | 2011-11-11 | donke       |
+|  4 | donkey2  | carry   | 2007-09-19 | donke       |
+|  5 | donkey1  | stay    | 2011-11-11 | donke       |
+|  6 | donkey2  | carry   | 2007-09-19 | donke       |
+|  7 | dog1     | sit     | 2021-03-05 | dog         |
+|  8 | dog2     | bark    | 2019-06-28 | dog         |
+|  9 | cat1     | eat     | 2020-10-15 | cat         |
+| 10 | cat2     | purr    | 2015-04-18 | cat         |
+| 11 | hamster1 | drink   | 2018-09-21 | hamst       |
+| 12 | hamster2 | run     | 2021-07-13 | hamst       |
++----+----------+---------+------------+-------------+
+12 rows in set (0,00 sec)
+
+mysql>

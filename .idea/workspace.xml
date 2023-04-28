@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e8ff0bb-5d58-47d4-8d0a-8fd7facd6b47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/pack_animals/Camel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/pack_animals/Donkey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/pack_animals/Horse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/pack_animals/PackAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/pets/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/pets/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/pets/Hamster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/pets/PetAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/controlwork/repository/registry/AnimalRegistry.java" afterDir="false" />
+    <list default="true" id="9e8ff0bb-5d58-47d4-8d0a-8fd7facd6b47" name="Changes" comment="Completed!">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +62,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682670100074</updated>
-      <workItem from="1682670101493" duration="1280000" />
+      <workItem from="1682670101493" duration="1597000" />
     </task>
+    <task id="LOCAL-00001" summary="Completed!">
+      <created>1682671550137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682671550137</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed!" />
   </component>
 </project>
